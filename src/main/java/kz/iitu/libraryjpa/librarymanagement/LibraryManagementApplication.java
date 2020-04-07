@@ -1,17 +1,12 @@
 package kz.iitu.libraryjpa.librarymanagement;
 
 import kz.iitu.libraryjpa.librarymanagement.Entity.Book;
-import kz.iitu.libraryjpa.librarymanagement.Entity.BookCategory;
 import kz.iitu.libraryjpa.librarymanagement.Entity.BookStatus;
 import kz.iitu.libraryjpa.librarymanagement.Repository.BookRepository;
-import kz.iitu.libraryjpa.librarymanagement.Repository.CategoryRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.data.jpa.repository.Query;
-
-import javax.persistence.EntityManager;
 
 @SpringBootApplication
 public class LibraryManagementApplication {
