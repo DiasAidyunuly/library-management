@@ -10,6 +10,7 @@ import java.util.List;
 
 @Repository
 public interface BookRepository extends JpaRepository<Book, Long> {
+
     List<Book> findByTitleContaining(String title);
 
     List<Book> findByStatusEquals(BookStatus issued);
@@ -17,4 +18,6 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     @Query(value = "SELECT * FROM Book AS b INNER JOIN Author AS a ON author_id = a.id WHERE a.name =?1",
             nativeQuery = true)
     List<Book> findByAuthor(String name);
+
+    List<Book> findByYearOfPubBetween(Integer year1, Integer year2);
 }

@@ -9,7 +9,7 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
-    private Integer YearOfPub;
+    private Integer yearOfPub;
 
 
     @ManyToMany(mappedBy = "bookList", fetch = FetchType.LAZY)
@@ -43,11 +43,11 @@ public class Book {
     }
 
     public Integer getYearOfPub() {
-        return YearOfPub;
+        return yearOfPub;
     }
 
     public void setYearOfPub(Integer yearOfPub) {
-        YearOfPub = yearOfPub;
+        yearOfPub = yearOfPub;
     }
 
     public List<BookCategory> getCategoryList() {
